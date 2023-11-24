@@ -2559,6 +2559,7 @@ input, select, textarea {
 					color: #953d75;
 				}
 
+				
 /* Image */
 
 	.image {
@@ -2612,6 +2613,73 @@ input, select, textarea {
 			.image.main img {
 				width: 100%;
 			}
+
+		.image.grid {
+			display:grid;
+			grid-template-columns: 1fr 1fr 1fr;
+			margin: 0 0 2em 0;
+		}
+
+		.image.grid img{
+			aspect-ratio: 1/1;
+		}
+
+/* Card */
+.gallery{
+	max-width: 200rem;
+	margin-inline: auto;
+	padding-inline: 0rem;
+}
+
+.card-image img{
+	max-width: 100%;
+	height: auto;
+	vertical-align: middle;
+	display: inline-block;
+	object-fit: cover;
+}
+
+.art-grid > div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.art-grid > div > img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.art-grid{
+	display: grid;
+	grid-gap: 5px;
+	grid-template-columns:  repeat(auto-fit, minmax(250px, 1fr));
+	grid-auto-rows: 250px;
+	grid-auto-flow:dense;
+}
+
+.art-grid .card{
+	grid-row: span 1;
+	grid-row: span 1;
+}
+
+.art-grid .wide{
+	grid-column: span 2;
+	grid-row: span 1;
+}
+
+.art-grid .tall{
+	grid-row: span 2;
+	grid-column: span 1;
+}
+
+.art-grid .big{
+	grid-column: span 2;
+	grid-row: span 2;
+}
 
 /* List */
 
